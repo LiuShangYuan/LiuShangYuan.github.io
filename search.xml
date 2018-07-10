@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[vim编辑器的快捷键]]></title>
+    <url>%2F2018%2F07%2F10%2Fvimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL的坑]]></title>
+    <url>%2F2018%2F07%2F10%2FMySQL%E7%9A%84%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为% 1234Could not get JDBC Connection; nested exception is java.sql.SQLException: null, message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;update user set host=&quot;%&quot; where user=&quot;root&quot;;flush privileges; + 修改bind-address 12/etc/mysql/mysql.conf.d/mysqld.cnfbind-address = 0.0.0.0 + MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法 https://blog.csdn.net/sinat_34820292/article/details/78582696 + spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F07%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>

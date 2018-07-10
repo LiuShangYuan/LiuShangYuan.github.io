@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL* mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
+<meta name="description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL的坑">
 <meta property="og:url" content="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/10/MySQL的坑/index.html">
 <meta property="og:site_name" content="LiuShangYuan&#39;s Blog">
-<meta property="og:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL* mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
+<meta property="og:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-10T15:49:35.820Z">
+<meta property="og:updated_time" content="2018-07-10T15:53:00.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL的坑">
-<meta name="twitter:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL* mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
+<meta name="twitter:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
 
 
 
@@ -331,16 +331,16 @@
 
       
         <h3 id="mysql启动、停止和重启"><a href="#mysql启动、停止和重启" class="headerlink" title="mysql启动、停止和重启"></a>mysql启动、停止和重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql start</span><br><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">sudo /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure>
-<h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>* mysql 数据库中的user表的root用户对应的host改为%
+<h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>+ mysql 数据库中的user表的root用户对应的host改为%
     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Could not get JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;</span><br><span class="line"></span><br><span class="line">update user set host=&quot;%&quot; where user=&quot;root&quot;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 
-* 修改bind-address
++ 修改bind-address
     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/mysql/mysql.conf.d/mysqld.cnf</span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
 
-* MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法
++ MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法
     https://blog.csdn.net/sinat_34820292/article/details/78582696
 
-* spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法
++ spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法
 </code></pre>
       
     </div>
@@ -371,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/09/测试博客/" rel="next" title="测试博客">
-                <i class="fa fa-chevron-left"></i> 测试博客
+              <a href="/2018/07/09/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -464,7 +464,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

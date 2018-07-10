@@ -455,158 +455,17 @@
         
           
             <h3 id="mysql启动、停止和重启"><a href="#mysql启动、停止和重启" class="headerlink" title="mysql启动、停止和重启"></a>mysql启动、停止和重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql start</span><br><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">sudo /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure>
-<h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>* mysql 数据库中的user表的root用户对应的host改为%
+<h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>+ mysql 数据库中的user表的root用户对应的host改为%
     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Could not get JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;</span><br><span class="line"></span><br><span class="line">update user set host=&quot;%&quot; where user=&quot;root&quot;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 
-* 修改bind-address
++ 修改bind-address
     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/mysql/mysql.conf.d/mysqld.cnf</span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
 
-* MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法
++ MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法
     https://blog.csdn.net/sinat_34820292/article/details/78582696
 
-* spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法
++ spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法
 </code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/09/测试博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiuShangYuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tomcat.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LiuShangYuan's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/09/测试博客/" itemprop="url">测试博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T16:53:15+08:00">
-                2018-07-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="测试博客"><a href="#测试博客" class="headerlink" title="测试博客"></a>测试博客</h2>
           
         
       
@@ -819,7 +678,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Git分支相关]]></title>
+    <url>%2F2018%2F07%2F11%2FGit%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3%2F</url>
+    <content type="text"><![CDATA[撤销修改 撤销暂存区add(撤销git add) 1git reset HEAD &lt;file&gt;... 恢复为修改但为add的状态 撤销工作目录的修改 1git checkout -- &lt;file&gt;... 将工作目录的修改撤销 分支 新建分支 123git branch newBranchgit checkout -b newBranch 创建新分支并转到新分支下git checkout newBranch 切换分支 分支的使用 在master分支上开发完成后，项目可能上线，为了不影响master分支的内容，新建一个newBranch开发新的特性，新分支下进行的变动不会影响到master分支，在开发新分支的过程中原来的分支可能会发现bug，切换回master分支，使用git checkout head撤销修改，并修改bug后提交。当newBranch的新特性开发完成后将此分支在合并到master分支上]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vim编辑器的快捷键]]></title>
     <url>%2F2018%2F07%2F10%2Fvimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
-    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行]]></content>
+    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行 vi +n file 打开文件并定位光标到第n行 vi + file 打开文件并定位光标到最后一行 vi +/String file 打开文件并定位光标到第一个String出现的位置 一般模式 /String 向下搜索 ?String 向上搜索]]></content>
       <tags>
         <tag>linux</tag>
         <tag>vim</tag>

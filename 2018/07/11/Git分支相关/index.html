@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
-<meta name="keywords" content="mysql">
+<meta name="description" content="撤销修改 撤销暂存区add(撤销git add)   1git reset HEAD &amp;lt;file&amp;gt;... 恢复为修改但为add的状态    撤销工作目录的修改  1git checkout -- &amp;lt;file&amp;gt;... 将工作目录的修改撤销   分支 新建分支   123git branch newBranchgit checkout -b newBranch 创建新分支并转到">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL的坑">
-<meta property="og:url" content="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/10/MySQL的坑/index.html">
+<meta property="og:title" content="Git分支相关">
+<meta property="og:url" content="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/11/Git分支相关/index.html">
 <meta property="og:site_name" content="LiuShangYuan&#39;s Blog">
-<meta property="og:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
+<meta property="og:description" content="撤销修改 撤销暂存区add(撤销git add)   1git reset HEAD &amp;lt;file&amp;gt;... 恢复为修改但为add的状态    撤销工作目录的修改  1git checkout -- &amp;lt;file&amp;gt;... 将工作目录的修改撤销   分支 新建分支   123git branch newBranchgit checkout -b newBranch 创建新分支并转到">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-10T15:53:00.884Z">
+<meta property="og:updated_time" content="2018-07-11T07:05:49.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL的坑">
-<meta name="twitter:description" content="mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为%     1234Could not get JDBC Connection">
+<meta name="twitter:title" content="Git分支相关">
+<meta name="twitter:description" content="撤销修改 撤销暂存区add(撤销git add)   1git reset HEAD &amp;lt;file&amp;gt;... 恢复为修改但为add的状态    撤销工作目录的修改  1git checkout -- &amp;lt;file&amp;gt;... 将工作目录的修改撤销   分支 新建分支   123git branch newBranchgit checkout -b newBranch 创建新分支并转到">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/10/MySQL的坑/"/>
+  <link rel="canonical" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/11/Git分支相关/"/>
 
 
 
 
 
-  <title>MySQL的坑 | LiuShangYuan's Blog</title>
+  <title>Git分支相关 | LiuShangYuan's Blog</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/10/MySQL的坑/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/11/Git分支相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiuShangYuan">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MySQL的坑</h1>
+          <h1 class="post-title" itemprop="name headline">Git分支相关</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T22:12:02+08:00">
-                2018-07-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-11T14:27:38+08:00">
+                2018-07-11
               </time>
             
 
@@ -364,18 +364,26 @@
       
 
       
-        <h3 id="mysql启动、停止和重启"><a href="#mysql启动、停止和重启" class="headerlink" title="mysql启动、停止和重启"></a>mysql启动、停止和重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql start</span><br><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">sudo /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure>
-<h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>+ mysql 数据库中的user表的root用户对应的host改为%
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Could not get JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;</span><br><span class="line"></span><br><span class="line">update user set host=&quot;%&quot; where user=&quot;root&quot;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+        <h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li><p>撤销暂存区add(撤销git add)</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file&gt;... 恢复为修改但为add的状态</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>撤销工作目录的修改  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;... 将工作目录的修改撤销</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><ul>
+<li><p>新建分支</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch newBranch</span><br><span class="line">git checkout -b newBranch 创建新分支并转到新分支下</span><br><span class="line">git checkout newBranch 切换分支</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分支的使用</p>
+<blockquote>
+<p>在master分支上开发完成后，项目可能上线，为了不影响master分支的内容，新建一个newBranch开发新的特性，新分支下进行的变动不会影响到master分支，在开发新分支的过程中原来的分支可能会发现bug，切换回master分支，使用git checkout head撤销修改，并修改bug后提交。当newBranch的新特性开发完成后将此分支在合并到master分支上</p>
+</blockquote>
+</li>
+</ul>
 
-+ 修改bind-address
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/mysql/mysql.conf.d/mysqld.cnf</span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
-
-+ MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法
-    https://blog.csdn.net/sinat_34820292/article/details/78582696
-
-+ spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法
-</code></pre>
       
     </div>
     
@@ -392,7 +400,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -405,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/09/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/07/10/vimimm编辑器的快捷键/" rel="next" title="vim编辑器的快捷键">
+                <i class="fa fa-chevron-left"></i> vim编辑器的快捷键
               </a>
             
           </div>
@@ -414,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/10/vimimm编辑器的快捷键/" rel="prev" title="vim编辑器的快捷键">
-                vim编辑器的快捷键 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql启动、停止和重启"><span class="nav-number">1.</span> <span class="nav-text">mysql启动、停止和重启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Window下Java程序访问虚拟机中的MySQL"><span class="nav-number">2.</span> <span class="nav-text">Window下Java程序访问虚拟机中的MySQL</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改"><span class="nav-number">1.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支"><span class="nav-number">2.</span> <span class="nav-text">分支</span></a></li></ol></div>
             
 
           </div>

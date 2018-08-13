@@ -293,6 +293,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/PyTorch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiuShangYuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tomcat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuShangYuan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/13/PyTorch/" itemprop="url">PyTorch</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-13T16:28:54+08:00">
+                2018-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="torch-tensor与numpy-ndarray的转化-tensor与ndarray相似"><a href="#torch-tensor与numpy-ndarray的转化-tensor与ndarray相似" class="headerlink" title="torch tensor与numpy ndarray的转化[tensor与ndarray相似]"></a>torch tensor与numpy ndarray的转化[tensor与ndarray相似]</h3><ul>
+<li>tensor.numpy() tensor转换成ndarray</li>
+<li>tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype]</li>
+</ul>
+<h3 id="tensor上的基本操作与运算"><a href="#tensor上的基本操作与运算" class="headerlink" title="tensor上的基本操作与运算"></a>tensor上的基本操作与运算</h3><blockquote>
+<p>tensor.mean(dim=) dim=0每列 dim=1每行<br>abs(), ceil(), floor(), round()<br>flatten() 拉平成one dim<br>torch.matmul(), torch.mm(), troch.dot(), tensor.dot()<br>tensor.min(dim), tensor.max(dim)<br>tensor.argmax(dim), tensor.argmin(dim)<br>tensor.size(dim) 某个维度的大小<br>tensor.view() 改变维度(可以出入-1表示batch)<br>torch.stack([list of tensor], dim=) 堆叠</p>
+</blockquote>
+<h3 id="torch搭建network"><a href="#torch搭建network" class="headerlink" title="torch搭建network"></a>torch搭建network</h3><ul>
+<li>torch.nn模块包含与神经网络相关的结构</li>
+<li>troch.Sequential() 包裹一个功能完整的网络结构</li>
+<li>torch.nn.Linear() 线性结构</li>
+<li>torch.nn.ReLU() 激励函数(…)</li>
+<li>torch.optim.SGD 优化器(…)</li>
+<li>torch.nn.MSELoss() 损失函数(…)<blockquote>
+<p>torch.nn.CrossEntropy() 函数的labels不是onehot形式的</p>
+</blockquote>
+</li>
+<li>torch.nn.Conv2d()</li>
+<li>torch.nn.MaxPool2d()</li>
+<li>troch.nn.LSTM(batch_first=True, …) [batch_first important]</li>
+<li>将网络定义成class <blockquote>
+<p>继承tensor.nn.Module<br><strong>init</strong>(self)方法中定义网络结构<br>forward(self, x) 方法中定义前向传播, 并返回前向传播结果</p>
+</blockquote>
+</li>
+<li>nn.rnn()</li>
+</ul>
+<h3 id="模型的保存和加载"><a href="#模型的保存和加载" class="headerlink" title="模型的保存和加载"></a>模型的保存和加载</h3><ul>
+<li>torch.save(net, ‘net.pkl’)</li>
+<li>net = torch.load(‘net.pkl’)</li>
+<li>只保存模型的参数[需要重新定义网络的结构]<blockquote>
+<p>torch.save(net.state_dict(), ‘net_parameter.pkl’)<br>define net strcture as net<br>net.load_state_dict(torch.load(‘net_parameters.pkl’))</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="minibatch"><a href="#minibatch" class="headerlink" title="minibatch"></a>minibatch</h3><ul>
+<li>import torch.utils.data as Data</li>
+<li>定义DataSet<blockquote>
+<p>torch_dataset = data.TensorDataset(x, y)</p>
+</blockquote>
+</li>
+<li>定义Loader<blockquote>
+<p>loader = data.DataLoader(dataset=, batch_size=, shuffle=,…)<br>对loder进行迭代每次返回一个batch的数据</p>
+</blockquote>
+</li>
+</ul>
+<p>### </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/python爬虫基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1000,7 +1165,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1013,7 +1178,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -1,82 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>python爬虫基础</title>
-      <link href="/2018/08/13/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/"/>
-      <url>/2018/08/13/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</url>
-      <content type="html"><![CDATA[<h3 id="requests-库"><a href="#requests-库" class="headerlink" title="requests 库"></a>requests 库</h3><ul><li><p>requests.get(url=, headers=)</p><blockquote><p>headers可以设置User-Agent等请求头信息</p></blockquote></li><li><p>设置代理</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;:ip&amp;port</span><br><span class="line">    &quot;https&quot;:ip&amp;port</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure></li><li><p>requests.models.Response</p><blockquote><p>requests.get() 返回对象<br>.status_code属性表示状态码<br>.text属性表示文本内容<br>.encoding属性属性指明编解码<br>.apparent_encoding属性根据内容推断编码方式</p></blockquote></li><li><p>xpath解析</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line">xtree = etree.HTML(html)</span><br><span class="line">xtree.xpath(xpath)</span><br></pre></td></tr></table></figure></li></ul><h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul><li><p>parse.quote(string=, encoding=) 对url进行编码</p></li><li><p>parse.unquote(string=, encoding=) 对url进行解码</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">&apos;%E4%B8%AD%E5%9B%BD&apos;</span><br><span class="line">parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">&apos;中国&apos;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-        <tags>
-            
-            <tag> python3 </tag>
-            
-            <tag> 爬虫 </tag>
-            
-            <tag> requests </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Git分支相关</title>
-      <link href="/2018/07/11/Git%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3/"/>
-      <url>/2018/07/11/Git%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3/</url>
-      <content type="html"><![CDATA[<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul><li><p>撤销暂存区add(撤销git add)</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file&gt;... 恢复为修改但为add的状态</span><br></pre></td></tr></table></figure></li></ul><ul><li>撤销工作目录的修改  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;... 将工作目录的修改撤销</span><br></pre></td></tr></table></figure></li></ul><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><ul><li><p>新建分支</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch newBranch</span><br><span class="line">git checkout -b newBranch 创建新分支并转到新分支下</span><br><span class="line">git checkout newBranch 切换分支</span><br></pre></td></tr></table></figure></li><li><p>分支的使用</p><blockquote><p>在master分支上开发完成后，项目可能上线，为了不影响master分支的内容，新建一个newBranch开发新的特性，新分支下进行的变动不会影响到master分支，在开发新分支的过程中原来的分支可能会发现bug，切换回master分支，使用git checkout head撤销修改，并修改bug后提交。当newBranch的新特性开发完成后将此分支在合并到master分支上</p></blockquote></li></ul>]]></content>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>vim编辑器的快捷键</title>
-      <link href="/2018/07/10/vimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-      <url>/2018/07/10/vimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-      <content type="html"><![CDATA[<ul><li>yy 复制一行</li><li>p 粘贴</li><li>dd 删除一行</li><li>vi +n file 打开文件并定位光标到第n行</li><li>vi + file 打开文件并定位光标到最后一行</li><li>vi +/String file 打开文件并定位光标到第一个String出现的位置</li></ul><a id="more"></a><h3 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h3><ul><li>/String 向下搜索</li><li>?String 向上搜索</li></ul>]]></content>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> vim </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>MySQL的坑</title>
-      <link href="/2018/07/10/MySQL%E7%9A%84%E5%9D%91/"/>
-      <url>/2018/07/10/MySQL%E7%9A%84%E5%9D%91/</url>
-      <content type="html"><![CDATA[<h3 id="mysql启动、停止和重启"><a href="#mysql启动、停止和重启" class="headerlink" title="mysql启动、停止和重启"></a>mysql启动、停止和重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql start</span><br><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">sudo /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure><h3 id="Window下Java程序访问虚拟机中的MySQL"><a href="#Window下Java程序访问虚拟机中的MySQL" class="headerlink" title="Window下Java程序访问虚拟机中的MySQL"></a>Window下Java程序访问虚拟机中的MySQL</h3><pre><code>+ mysql 数据库中的user表的root用户对应的host改为%    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Could not get JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;</span><br><span class="line"></span><br><span class="line">update user set host=&quot;%&quot; where user=&quot;root&quot;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>+ 修改bind-address    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/mysql/mysql.conf.d/mysqld.cnf</span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>+ MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法    https://blog.csdn.net/sinat_34820292/article/details/78582696+ spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法</code></pre>]]></content>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/07/09/hello-world/"/>
-      <url>/2018/07/09/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[PyTorch]]></title>
+    <url>%2F2018%2F08%2F13%2FPyTorch%2F</url>
+    <content type="text"><![CDATA[torch tensor与numpy ndarray的转化[tensor与ndarray相似] tensor.numpy() tensor转换成ndarray tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype] tensor上的基本操作与运算 tensor.mean(dim=) dim=0每列 dim=1每行abs(), ceil(), floor(), round()flatten() 拉平成one dimtorch.matmul(), torch.mm(), troch.dot(), tensor.dot()tensor.min(dim), tensor.max(dim)tensor.argmax(dim), tensor.argmin(dim)tensor.size(dim) 某个维度的大小tensor.view() 改变维度(可以出入-1表示batch)torch.stack([list of tensor], dim=) 堆叠 torch搭建network torch.nn模块包含与神经网络相关的结构 troch.Sequential() 包裹一个功能完整的网络结构 torch.nn.Linear() 线性结构 torch.nn.ReLU() 激励函数(…) torch.optim.SGD 优化器(…) torch.nn.MSELoss() 损失函数(…) torch.nn.CrossEntropy() 函数的labels不是onehot形式的 torch.nn.Conv2d() torch.nn.MaxPool2d() troch.nn.LSTM(batch_first=True, …) [batch_first important] 将网络定义成class 继承tensor.nn.Moduleinit(self)方法中定义网络结构forward(self, x) 方法中定义前向传播, 并返回前向传播结果 nn.rnn() 模型的保存和加载 torch.save(net, ‘net.pkl’) net = torch.load(‘net.pkl’) 只保存模型的参数[需要重新定义网络的结构] torch.save(net.state_dict(), ‘net_parameter.pkl’)define net strcture as netnet.load_state_dict(torch.load(‘net_parameters.pkl’)) minibatch import torch.utils.data as Data 定义DataSet torch_dataset = data.TensorDataset(x, y) 定义Loader loader = data.DataLoader(dataset=, batch_size=, shuffle=,…)对loder进行迭代每次返回一个batch的数据 ###]]></content>
+      <tags>
+        <tag>pytorch</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python爬虫基础]]></title>
+    <url>%2F2018%2F08%2F13%2Fpython%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"><![CDATA[requests 库 requests.get(url=, headers=) headers可以设置User-Agent等请求头信息 设置代理 12345678910proxies=&#123; &quot;http&quot;:ip&amp;port &quot;https&quot;:ip&amp;port&#125;SOCKS5代理(requests 2.12.x支持)proxies=&#123; &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot; &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;&#125;r = requests.get(url=url, headers=header,proxies=proxy) requests.models.Response requests.get() 返回对象.status_code属性表示状态码.text属性表示文本内容.encoding属性属性指明编解码.apparent_encoding属性根据内容推断编码方式 xpath解析 123from lxml import etreextree = etree.HTML(html)xtree.xpath(xpath) urllib.request(urllib2 in py2)urllib parse.quote(string=, encoding=) 对url进行编码 parse.unquote(string=, encoding=) 对url进行解码 1234parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)&apos;%E4%B8%AD%E5%9B%BD&apos;parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)&apos;中国&apos;]]></content>
+      <tags>
+        <tag>python3</tag>
+        <tag>爬虫</tag>
+        <tag>requests</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git分支相关]]></title>
+    <url>%2F2018%2F07%2F11%2FGit%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3%2F</url>
+    <content type="text"><![CDATA[撤销修改 撤销暂存区add(撤销git add) 1git reset HEAD &lt;file&gt;... 恢复为修改但为add的状态 撤销工作目录的修改 1git checkout -- &lt;file&gt;... 将工作目录的修改撤销 分支 新建分支 123git branch newBranchgit checkout -b newBranch 创建新分支并转到新分支下git checkout newBranch 切换分支 分支的使用 在master分支上开发完成后，项目可能上线，为了不影响master分支的内容，新建一个newBranch开发新的特性，新分支下进行的变动不会影响到master分支，在开发新分支的过程中原来的分支可能会发现bug，切换回master分支，使用git checkout head撤销修改，并修改bug后提交。当newBranch的新特性开发完成后将此分支在合并到master分支上]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vim编辑器的快捷键]]></title>
+    <url>%2F2018%2F07%2F10%2Fvimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行 vi +n file 打开文件并定位光标到第n行 vi + file 打开文件并定位光标到最后一行 vi +/String file 打开文件并定位光标到第一个String出现的位置 一般模式 /String 向下搜索 ?String 向上搜索]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL的坑]]></title>
+    <url>%2F2018%2F07%2F10%2FMySQL%E7%9A%84%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[mysql启动、停止和重启123sudo /etc/init.d/mysql startsudo /etc/init.d/mysql stopsudo /etc/init.d/mysql restart Window下Java程序访问虚拟机中的MySQL+ mysql 数据库中的user表的root用户对应的host改为% 1234Could not get JDBC Connection; nested exception is java.sql.SQLException: null, message from server: &quot;Host &apos;192.168.29.1&apos; is not allowed to connect to this MySQL server&quot;update user set host=&quot;%&quot; where user=&quot;root&quot;;flush privileges; + 修改bind-address 12/etc/mysql/mysql.conf.d/mysqld.cnfbind-address = 0.0.0.0 + MySQL忘记密码或者因为修改mysql.user导致无法登陆解决方法 https://blog.csdn.net/sinat_34820292/article/details/78582696 + spring-jdbc JDBCTemplate的query方法的回调RowCallbackHandler的ResultSet不需要调用next方法]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F07%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>

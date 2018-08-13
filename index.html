@@ -293,6 +293,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/python爬虫基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiuShangYuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tomcat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuShangYuan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/13/python爬虫基础/" itemprop="url">python爬虫基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-13T11:12:15+08:00">
+                2018-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="requests-库"><a href="#requests-库" class="headerlink" title="requests 库"></a>requests 库</h3><ul>
+<li><p>requests.get(url=, headers=)</p>
+<blockquote>
+<p>headers可以设置User-Agent等请求头信息</p>
+</blockquote>
+</li>
+<li><p>设置代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;:ip&amp;port</span><br><span class="line">    &quot;https&quot;:ip&amp;port</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>requests.models.Response</p>
+<blockquote>
+<p>requests.get() 返回对象<br>.status_code属性表示状态码<br>.text属性表示文本内容<br>.encoding属性属性指明编解码<br>.apparent_encoding属性根据内容推断编码方式</p>
+</blockquote>
+</li>
+<li><p>xpath解析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line">xtree = etree.HTML(html)</span><br><span class="line">xtree.xpath(xpath)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul>
+<li><p>parse.quote(string=, encoding=) 对url进行编码</p>
+</li>
+<li><p>parse.unquote(string=, encoding=) 对url进行解码</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">&apos;%E4%B8%AD%E5%9B%BD&apos;</span><br><span class="line">parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">&apos;中国&apos;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/07/11/Git分支相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -857,7 +1000,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -870,7 +1013,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

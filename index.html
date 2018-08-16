@@ -293,6 +293,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/15/scrapy框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiuShangYuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tomcat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuShangYuan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/15/scrapy框架/" itemprop="url">scrapy框架</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-15T19:39:46+08:00">
+                2018-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="scrapy指令"><a href="#scrapy指令" class="headerlink" title="scrapy指令"></a>scrapy指令</h3><ul>
+<li><p>scrapy startproject XXX [创建一个新的scrapy工程]</p>
+</li>
+<li><p>scrapy genspider [options] <name> <domain> [创建一个爬虫文件, 在spider文件夹下]</domain></name></p>
+</li>
+<li><p>scrapy crawl XXXSpider 运行某个爬虫</p>
+</li>
+<li><p>scrapy list 显示当前工程中的所有爬虫</p>
+</li>
+</ul>
+<h3 id="响应对象-scrapy-http-response-html-HtmlResponse"><a href="#响应对象-scrapy-http-response-html-HtmlResponse" class="headerlink" title="响应对象[scrapy.http.response.html.HtmlResponse]"></a>响应对象[scrapy.http.response.html.HtmlResponse]</h3><ul>
+<li>.xpath().extract() [返回list类型]</li>
+</ul>
+<h3 id="item和itempipeline"><a href="#item和itempipeline" class="headerlink" title="item和itempipeline"></a>item和itempipeline</h3><h3 id="middlewares"><a href="#middlewares" class="headerlink" title="middlewares"></a>middlewares</h3><ul>
+<li>下载中间件DownLoaderMiddleWare</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def process_request(self, request, spider): 对request进行处理[可选择一系列返回值]</span><br><span class="line">def process_response(self, request, response, spider): 对response进行处理[可选择一系列返回值]</span><br><span class="line"></span><br><span class="line">&lt;class &apos;scrapy.http.request.Request&apos;&gt; request对象</span><br><span class="line">&lt;class &apos;scrapy.http.response.html.HtmlResponse&apos;&gt; response对象</span><br><span class="line">&lt;class &apos;ProxyPool.spiders.ProxySpider.ProxyspiderSpider&apos;&gt; spider对象</span><br></pre></td></tr></table></figure>
+<h3 id="settings文件配置"><a href="#settings文件配置" class="headerlink" title="settings文件配置"></a>settings文件配置</h3><ul>
+<li>DEFAULT_REQUEST_HEADERS [配置请求头信息, 如User-Agent]<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/PyTorch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -500,6 +640,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -536,8 +698,15 @@
 </blockquote>
 </li>
 <li><p>设置代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;:ip&amp;port</span><br><span class="line">    &quot;https&quot;:ip&amp;port</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;: &apos;ip:port&apos;</span><br><span class="line">    &quot;https&quot;: &apos;ip&amp;port&apos;</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>设置请求超时时间</p>
+<blockquote>
+<p>requests.get(url=, headers=, proxies=, timeout=) 单位是秒</p>
+</blockquote>
+</li>
+</ul>
+<ul>
 <li><p>requests.models.Response</p>
 <blockquote>
 <p>requests.get() 返回对象<br>.status_code属性表示状态码<br>.text属性表示文本内容<br>.encoding属性属性指明编解码<br>.apparent_encoding属性根据内容推断编码方式</p>
@@ -547,7 +716,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line">xtree = etree.HTML(html)</span><br><span class="line">xtree.xpath(xpath)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul>
+<h3 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h3><ul>
+<li><p>获取标签内的文本text() [//table/td[1]/text()]</p>
+</li>
+<li><p>获取标签的属性值 @attribute_name [//a[class=’next’]/@href]</p>
+</li>
+</ul>
+<h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><ul>
+<li>urlopen()</li>
+</ul>
+<h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul>
 <li><p>parse.quote(string=, encoding=) 对url进行编码</p>
 </li>
 <li><p>parse.unquote(string=, encoding=) 对url进行解码</p>
@@ -1165,12 +1343,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -1178,7 +1365,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

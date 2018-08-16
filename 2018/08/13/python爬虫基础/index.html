@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;:ip&amp;amp;port    &amp;quot;https&amp;quot;:ip&amp;amp;port&amp;#125;SOCKS5代理(requests 2.12.x支持)p">
+<meta name="description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
 <meta name="keywords" content="python3,爬虫,requests">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫基础">
 <meta property="og:url" content="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/python爬虫基础/index.html">
 <meta property="og:site_name" content="LiuShangYuan&#39;s Blog">
-<meta property="og:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;:ip&amp;amp;port    &amp;quot;https&amp;quot;:ip&amp;amp;port&amp;#125;SOCKS5代理(requests 2.12.x支持)p">
+<meta property="og:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-13T05:38:15.270Z">
+<meta property="og:updated_time" content="2018-08-16T05:54:29.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫基础">
-<meta name="twitter:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;:ip&amp;amp;port    &amp;quot;https&amp;quot;:ip&amp;amp;port&amp;#125;SOCKS5代理(requests 2.12.x支持)p">
+<meta name="twitter:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
 
 
 
@@ -337,6 +337,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -371,8 +393,15 @@
 </blockquote>
 </li>
 <li><p>设置代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;:ip&amp;port</span><br><span class="line">    &quot;https&quot;:ip&amp;port</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;: &apos;ip:port&apos;</span><br><span class="line">    &quot;https&quot;: &apos;ip&amp;port&apos;</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>设置请求超时时间</p>
+<blockquote>
+<p>requests.get(url=, headers=, proxies=, timeout=) 单位是秒</p>
+</blockquote>
+</li>
+</ul>
+<ul>
 <li><p>requests.models.Response</p>
 <blockquote>
 <p>requests.get() 返回对象<br>.status_code属性表示状态码<br>.text属性表示文本内容<br>.encoding属性属性指明编解码<br>.apparent_encoding属性根据内容推断编码方式</p>
@@ -382,7 +411,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line">xtree = etree.HTML(html)</span><br><span class="line">xtree.xpath(xpath)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul>
+<h3 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h3><ul>
+<li><p>获取标签内的文本text() [//table/td[1]/text()]</p>
+</li>
+<li><p>获取标签的属性值 @attribute_name [//a[class=’next’]/@href]</p>
+</li>
+</ul>
+<h3 id="urllib-request-urllib2-in-py2"><a href="#urllib-request-urllib2-in-py2" class="headerlink" title="urllib.request(urllib2 in py2)"></a>urllib.request(urllib2 in py2)</h3><ul>
+<li>urlopen()</li>
+</ul>
+<h3 id="urllib"><a href="#urllib" class="headerlink" title="urllib"></a>urllib</h3><ul>
 <li><p>parse.quote(string=, encoding=) 对url进行编码</p>
 </li>
 <li><p>parse.unquote(string=, encoding=) 对url进行解码</p>
@@ -515,12 +553,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -528,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -561,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requests-库"><span class="nav-number">1.</span> <span class="nav-text">requests 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urllib-request-urllib2-in-py2"><span class="nav-number">2.</span> <span class="nav-text">urllib.request(urllib2 in py2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urllib"><span class="nav-number">3.</span> <span class="nav-text">urllib</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requests-库"><span class="nav-number">1.</span> <span class="nav-text">requests 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xpath"><span class="nav-number">2.</span> <span class="nav-text">xpath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urllib-request-urllib2-in-py2"><span class="nav-number">3.</span> <span class="nav-text">urllib.request(urllib2 in py2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urllib"><span class="nav-number">4.</span> <span class="nav-text">urllib</span></a></li></ol></div>
             
 
           </div>

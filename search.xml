@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[scrapy框架]]></title>
+    <url>%2F2018%2F08%2F15%2Fscrapy%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[scrapy指令 scrapy startproject XXX [创建一个新的scrapy工程] scrapy genspider [options] [创建一个爬虫文件, 在spider文件夹下] scrapy crawl XXXSpider 运行某个爬虫 scrapy list 显示当前工程中的所有爬虫 响应对象[scrapy.http.response.html.HtmlResponse] .xpath().extract() [返回list类型] item和itempipelinemiddlewares 下载中间件DownLoaderMiddleWare 123456def process_request(self, request, spider): 对request进行处理[可选择一系列返回值]def process_response(self, request, response, spider): 对response进行处理[可选择一系列返回值]&lt;class &apos;scrapy.http.request.Request&apos;&gt; request对象&lt;class &apos;scrapy.http.response.html.HtmlResponse&apos;&gt; response对象&lt;class &apos;ProxyPool.spiders.ProxySpider.ProxyspiderSpider&apos;&gt; spider对象 settings文件配置 DEFAULT_REQUEST_HEADERS [配置请求头信息, 如User-Agent]1&apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&apos;]]></content>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PyTorch]]></title>
     <url>%2F2018%2F08%2F13%2FPyTorch%2F</url>
     <content type="text"><![CDATA[torch tensor与numpy ndarray的转化[tensor与ndarray相似] tensor.numpy() tensor转换成ndarray tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype] tensor上的基本操作与运算 tensor.mean(dim=) dim=0每列 dim=1每行abs(), ceil(), floor(), round()flatten() 拉平成one dimtorch.matmul(), torch.mm(), troch.dot(), tensor.dot()tensor.min(dim), tensor.max(dim)tensor.argmax(dim), tensor.argmin(dim)tensor.size(dim) 某个维度的大小tensor.view() 改变维度(可以出入-1表示batch)torch.stack([list of tensor], dim=) 堆叠 torch搭建network torch.nn模块包含与神经网络相关的结构 troch.Sequential() 包裹一个功能完整的网络结构 torch.nn.Linear() 线性结构 torch.nn.ReLU() 激励函数(…) torch.optim.SGD 优化器(…) torch.nn.MSELoss() 损失函数(…) torch.nn.CrossEntropy() 函数的labels不是onehot形式的 torch.nn.Conv2d() torch.nn.MaxPool2d() troch.nn.LSTM(batch_first=True, …) [batch_first important] 将网络定义成class 继承tensor.nn.Moduleinit(self)方法中定义网络结构forward(self, x) 方法中定义前向传播, 并返回前向传播结果 nn.rnn() 模型的保存和加载 torch.save(net, ‘net.pkl’) net = torch.load(‘net.pkl’) 只保存模型的参数[需要重新定义网络的结构] torch.save(net.state_dict(), ‘net_parameter.pkl’)define net strcture as netnet.load_state_dict(torch.load(‘net_parameters.pkl’)) minibatch import torch.utils.data as Data 定义DataSet torch_dataset = data.TensorDataset(x, y) 定义Loader loader = data.DataLoader(dataset=, batch_size=, shuffle=,…)对loder进行迭代每次返回一个batch的数据 ###]]></content>
@@ -12,7 +21,10 @@
   <entry>
     <title><![CDATA[python爬虫基础]]></title>
     <url>%2F2018%2F08%2F13%2Fpython%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[requests 库 requests.get(url=, headers=) headers可以设置User-Agent等请求头信息 设置代理 12345678910proxies=&#123; &quot;http&quot;:ip&amp;port &quot;https&quot;:ip&amp;port&#125;SOCKS5代理(requests 2.12.x支持)proxies=&#123; &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot; &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;&#125;r = requests.get(url=url, headers=header,proxies=proxy) requests.models.Response requests.get() 返回对象.status_code属性表示状态码.text属性表示文本内容.encoding属性属性指明编解码.apparent_encoding属性根据内容推断编码方式 xpath解析 123from lxml import etreextree = etree.HTML(html)xtree.xpath(xpath) urllib.request(urllib2 in py2)urllib parse.quote(string=, encoding=) 对url进行编码 parse.unquote(string=, encoding=) 对url进行解码 1234parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)&apos;%E4%B8%AD%E5%9B%BD&apos;parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)&apos;中国&apos;]]></content>
+    <content type="text"><![CDATA[requests 库 requests.get(url=, headers=) headers可以设置User-Agent等请求头信息 设置代理 12345678910proxies=&#123; &quot;http&quot;: &apos;ip:port&apos; &quot;https&quot;: &apos;ip&amp;port&apos;&#125;SOCKS5代理(requests 2.12.x支持)proxies=&#123; &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot; &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;&#125;r = requests.get(url=url, headers=header,proxies=proxy) 设置请求超时时间 requests.get(url=, headers=, proxies=, timeout=) 单位是秒 requests.models.Response requests.get() 返回对象.status_code属性表示状态码.text属性表示文本内容.encoding属性属性指明编解码.apparent_encoding属性根据内容推断编码方式 xpath解析 123from lxml import etreextree = etree.HTML(html)xtree.xpath(xpath) xpath 获取标签内的文本text() [//table/td[1]/text()] 获取标签的属性值 @attribute_name [//a[class=’next’]/@href] urllib.request(urllib2 in py2) urlopen() urllib parse.quote(string=, encoding=) 对url进行编码 parse.unquote(string=, encoding=) 对url进行解码 1234parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)&apos;%E4%B8%AD%E5%9B%BD&apos;parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)&apos;中国&apos;]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
       <tags>
         <tag>python3</tag>
         <tag>爬虫</tag>

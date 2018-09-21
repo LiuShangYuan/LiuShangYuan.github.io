@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Solr初探]]></title>
+    <url>%2F2018%2F09%2F20%2FSolr%E5%88%9D%E6%8E%A2%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Java并发编程]]></title>
+    <url>%2F2018%2F09%2F11%2FJava%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[Java内存模型[1.5时被重新修订] 工作内存(每个线程独立的内存区域) 主内存(线程共享的变量) 每个线程会将主内存中的共享变量复制一份到自己的工作内存中 synchronized &amp; volatile synchronized同步 synchronized可以修饰方法或代码块被synchronized关键字修饰的代码同一时刻只能被一个线程访问 一个同步块可以保证在同一时刻仅有一个线程可以进入代码的临界区。同步块还可以保证代码块中所有被访问的变量将会从主存中读入，当线程退出同步代码块时，所有被更新的变量都会被刷新回主存中去，不管这个变量是否被声明为volatile。 volatile可见性 两个CPU并行执行两个线程, CPU对内存的数据进行了缓存 原子性 eg:32位环境中long类型(64位)的读写不是原子性的 有序性[指令重排] wait、notify、notifyAll、sleep wait 会释放持有的锁 必须在synchronized语句中调用 notify 不会立刻释放持有的锁 随机唤醒一个在该对象上等待的线程 notifyAll 唤醒在改对象上等待的所有线程 sleep 不会释放锁 Thread join 在B线程中调用A线程的join方法, 会在A线程执行完成之后才能继续B线程的执行本质是让被调用线程在当前线程实例对象上wait yield 暂停当前正在执行的线程，并执行其他线程[让出CPU]。(可能没有效果) 线程中断 interrupt 设置线程的中断标记位isInterrupted 检查线程的中断标记位Thread.interrupted 判断是否被中断, 并清除中断状态 对一个处于阻塞状态的线程调用interrput方法会抛出InterruptedException异常, 并清除中断标记位http://www.cnblogs.com/skywang12345/p/3479949.html 重入锁 ReentrantLock java.util.concurrent.locks.ReentrantLock 中断响应 中断正在等待获得锁对象的线程lock.lockInterruptibly 申请锁(可被中断) tryLock(时长, 时间单位) 锁申请等待限时 tryLock() 尝试获取锁成功返回true失败返回false, 不进行等待 Condition条件 lock.newConditionawait 释放锁signal、signal Semaphore 信号量 ReadWriteLock 读写锁 读读线程可以并行, 读写或写写线程是互斥的 CountDownLatch倒计时器 控制某一线程在倒计时完成后再执行CountDownLatch(int count) 构造计时器countDown() 计时减一await() 等待计时完成 CyclicBarrier await() 等待所有线程集合 LockSupport线程阻塞工具类 park() 静态方法[阻塞线程]unpark(thread)类似信号量LockSupport为每个线程设置了一个许可, pack消费这个 许可, 许可不可用时线程阻塞, unpark将许可变为可用。定时阻塞 线程池 Executors 工厂 ExecutorService ThreadPoolExecutor FixedThreadPool、 SingleThreadPool、 CachedThreadPool都是通过ThreadPoolExecutor构造的线程数、最大线程数、超过线程数时空闲线程的存活时间、任务队列、线程工厂ThreadPoolExecutor.Worker[内部类]线程池中工作线程即为ThreadPoolExecutor.Worker的实例 ThreadFactory newThread() 异常堆栈 并发容器 ConcurrentHashMap CopyOnWriteArrayList ConcurrentLinkedQueue BlockingQueue ConcurrentSkipListMap 使用Collections.synchronizedXXX()]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scrapy框架]]></title>
     <url>%2F2018%2F08%2F15%2Fscrapy%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[scrapy指令 scrapy startproject XXX [创建一个新的scrapy工程] scrapy genspider [options] [创建一个爬虫文件, 在spider文件夹下] scrapy crawl XXXSpider 运行某个爬虫 scrapy list 显示当前工程中的所有爬虫 响应对象[scrapy.http.response.html.HtmlResponse] .xpath().extract() [返回list类型] item和itempipelinemiddlewares 下载中间件DownLoaderMiddleWare 123456def process_request(self, request, spider): 对request进行处理[可选择一系列返回值]def process_response(self, request, response, spider): 对response进行处理[可选择一系列返回值]&lt;class &apos;scrapy.http.request.Request&apos;&gt; request对象&lt;class &apos;scrapy.http.response.html.HtmlResponse&apos;&gt; response对象&lt;class &apos;ProxyPool.spiders.ProxySpider.ProxyspiderSpider&apos;&gt; spider对象 settings文件配置 DEFAULT_REQUEST_HEADERS [配置请求头信息, 如User-Agent]1&apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&apos;]]></content>
+    <content type="text"><![CDATA[scrapy指令 scrapy startproject XXX [创建一个新的scrapy工程] scrapy genspider [options] [创建一个爬虫文件, 在spider文件夹下] scrapy crawl XXXSpider 运行某个爬虫 scrapy list 显示当前工程中的所有爬虫 响应对象[scrapy.http.response.html.HtmlResponse] .xpath().extract() [返回list类型] item和itempipeline item [相当于字典, 存储爬去的内容] 123456789继承scrapy.Itemip = scrapy.Field()port = scrapy.Field()types = scrapy.Field()item = XXXItem()item[&apos;ip&apos;] = xxx...yield item 会被ItemPipeline所处理 itempipeline对Item进行进一步处理的地方 middlewares 下载中间件DownLoaderMiddleWare 123456def process_request(self, request, spider): 对request进行处理[可选择一系列返回值]def process_response(self, request, response, spider): 对response进行处理[可选择一系列返回值]&lt;class &apos;scrapy.http.request.Request&apos;&gt; request对象&lt;class &apos;scrapy.http.response.html.HtmlResponse&apos;&gt; response对象&lt;class &apos;ProxyPool.spiders.ProxySpider.ProxyspiderSpider&apos;&gt; spider对象 settings文件配置 DEFAULT_REQUEST_HEADERS [配置请求头信息, 如User-Agent]1&apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&apos;]]></content>
       <tags>
         <tag>爬虫</tag>
         <tag>scrapy</tag>
@@ -21,7 +35,7 @@
   <entry>
     <title><![CDATA[python爬虫基础]]></title>
     <url>%2F2018%2F08%2F13%2Fpython%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[requests 库 requests.get(url=, headers=) headers可以设置User-Agent等请求头信息 设置代理 12345678910proxies=&#123; &quot;http&quot;: &apos;ip:port&apos; &quot;https&quot;: &apos;ip&amp;port&apos;&#125;SOCKS5代理(requests 2.12.x支持)proxies=&#123; &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot; &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;&#125;r = requests.get(url=url, headers=header,proxies=proxy) 设置请求超时时间 requests.get(url=, headers=, proxies=, timeout=) 单位是秒 requests.models.Response requests.get() 返回对象.status_code属性表示状态码.text属性表示文本内容.encoding属性属性指明编解码.apparent_encoding属性根据内容推断编码方式 xpath解析 123from lxml import etreextree = etree.HTML(html)xtree.xpath(xpath) xpath 获取标签内的文本text() [//table/td[1]/text()] 获取标签的属性值 @attribute_name [//a[class=’next’]/@href] urllib.request(urllib2 in py2) urlopen() urllib parse.quote(string=, encoding=) 对url进行编码 parse.unquote(string=, encoding=) 对url进行解码 1234parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)&apos;%E4%B8%AD%E5%9B%BD&apos;parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)&apos;中国&apos;]]></content>
+    <content type="text"><![CDATA[requests 库 requests.get(url=, headers=) headers可以设置User-Agent等请求头信息 设置代理 12345678910proxies=&#123; &quot;http&quot;: &apos;ip:port&apos; &quot;https&quot;: &apos;ip:port&apos;&#125;SOCKS5代理(requests 2.12.x支持)proxies=&#123; &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot; &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;&#125;r = requests.get(url=url, headers=header,proxies=proxy) 设置请求超时时间 requests.get(url=, headers=, proxies=, timeout=) 单位是秒 requests.models.Response requests.get() 返回对象.status_code属性表示状态码.text属性表示文本内容.encoding属性属性指明编解码.apparent_encoding属性根据内容推断编码方式 xpath解析 123from lxml import etreextree = etree.HTML(html)xtree.xpath(xpath) xpath 获取标签内的文本text() [//table/td[1]/text()] 获取标签的属性值 @attribute_name [//a[class=’next’]/@href] urllib.request(urllib2 in py2) urlopen() urllib parse.quote(string=, encoding=) 对url进行编码 parse.unquote(string=, encoding=) 对url进行解码 1234parse.quote(string=&apos;中国&apos;, encoding=&apos;utf-8&apos;)&apos;%E4%B8%AD%E5%9B%BD&apos;parse.unquote(string=&apos;%E4%B8%AD%E5%9B%BD&apos;, encoding=&apos;utf-8&apos;)&apos;中国&apos;]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -41,8 +55,8 @@
   </entry>
   <entry>
     <title><![CDATA[vim编辑器的快捷键]]></title>
-    <url>%2F2018%2F07%2F10%2Fvimimm%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
-    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行 vi +n file 打开文件并定位光标到第n行 vi + file 打开文件并定位光标到最后一行 vi +/String file 打开文件并定位光标到第一个String出现的位置 一般模式 /String 向下搜索 ?String 向上搜索]]></content>
+    <url>%2F2018%2F07%2F10%2Fvim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[yy 复制一行 p 粘贴 dd 删除一行 vi +n file 打开文件并定位光标到第n行 vi + file 打开文件并定位光标到最后一行 vi +/String file 打开文件并定位光标到第一个String出现的位置 一般模式 /String 向下搜索 ?String 向上搜索 n/N 配合上面两个搜索使用, n表示继续上面的动作, N表示执行上面动作的相反动作 eg: 执行/String 后按下n表示继续向下查找, 按N表示向上查找 n + space 光标向后移动n位 0回到行首、$回到行尾 n + Enter光标向下移动n行]]></content>
       <tags>
         <tag>linux</tag>
         <tag>vim</tag>

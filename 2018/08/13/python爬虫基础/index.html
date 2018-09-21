@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
+<meta name="description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip:port&amp;apos;&amp;#125;SOCKS5代理(r">
 <meta name="keywords" content="python3,爬虫,requests">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫基础">
 <meta property="og:url" content="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/08/13/python爬虫基础/index.html">
 <meta property="og:site_name" content="LiuShangYuan&#39;s Blog">
-<meta property="og:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
+<meta property="og:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip:port&amp;apos;&amp;#125;SOCKS5代理(r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-16T05:54:29.383Z">
+<meta property="og:updated_time" content="2018-08-16T11:10:59.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫基础">
-<meta name="twitter:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip&amp;amp;port&amp;apos;&amp;#125;SOCKS5">
+<meta name="twitter:description" content="requests 库 requests.get(url=, headers=)  headers可以设置User-Agent等请求头信息   设置代理 12345678910proxies=&amp;#123;    &amp;quot;http&amp;quot;: &amp;apos;ip:port&amp;apos;    &amp;quot;https&amp;quot;: &amp;apos;ip:port&amp;apos;&amp;#125;SOCKS5代理(r">
 
 
 
@@ -393,7 +393,7 @@
 </blockquote>
 </li>
 <li><p>设置代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;: &apos;ip:port&apos;</span><br><span class="line">    &quot;https&quot;: &apos;ip&amp;port&apos;</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot;: &apos;ip:port&apos;</span><br><span class="line">    &quot;https&quot;: &apos;ip:port&apos;</span><br><span class="line">&#125;</span><br><span class="line">SOCKS5代理(requests 2.12.x支持)</span><br><span class="line">proxies=&#123;</span><br><span class="line">    &quot;http&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">    &quot;https&quot; : &quot;socks5://127.0.0.1:1080&quot;</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url, headers=header,proxies=proxy)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置请求超时时间</p>
 <blockquote>
@@ -553,7 +553,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -575,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

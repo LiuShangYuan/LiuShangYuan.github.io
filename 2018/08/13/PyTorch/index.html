@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LiuShangYuan&#39;s Blog">
 <meta property="og:description" content="torch tensor与numpy ndarray的转化[tensor与ndarray相似] tensor.numpy() tensor转换成ndarray tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype]  tensor上的基本操作与运算 tensor.mean(dim=) dim=0每列 dim=1每行abs(), ceil(),">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-13T08:30:20.646Z">
+<meta property="og:updated_time" content="2018-09-28T12:28:24.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyTorch">
 <meta name="twitter:description" content="torch tensor与numpy ndarray的转化[tensor与ndarray相似] tensor.numpy() tensor转换成ndarray tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype]  tensor上的基本操作与运算 tensor.mean(dim=) dim=0每列 dim=1每行abs(), ceil(),">
@@ -369,7 +369,7 @@
 <li>tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype]</li>
 </ul>
 <h3 id="tensor上的基本操作与运算"><a href="#tensor上的基本操作与运算" class="headerlink" title="tensor上的基本操作与运算"></a>tensor上的基本操作与运算</h3><blockquote>
-<p>tensor.mean(dim=) dim=0每列 dim=1每行<br>abs(), ceil(), floor(), round()<br>flatten() 拉平成one dim<br>torch.matmul(), torch.mm(), troch.dot(), tensor.dot()<br>tensor.min(dim), tensor.max(dim)<br>tensor.argmax(dim), tensor.argmin(dim)<br>tensor.size(dim) 某个维度的大小<br>tensor.view() 改变维度(可以出入-1表示batch)<br>torch.stack([list of tensor], dim=) 堆叠</p>
+<p>tensor.mean(dim=) dim=0每列 dim=1每行<br>abs(), ceil(), floor(), round()<br>flatten() 拉平成one dim<br>torch.matmul(), torch.mm(), troch.dot(), tensor.dot()<br>tensor.min(dim), tensor.max(dim)<br>tensor.argmax(dim), tensor.argmin(dim)<br>tensor.size(dim) 某个维度的大小<br>tensor.view() 改变维度(可以出入-1表示batch)<br>torch.stack([list of tensor], dim=) 堆叠<br>torch.bmm(batch1, batch2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bmm()是在两个batch上执行乘法的操作</span><br><span class="line">batch1 and batch2 must be 3-D tensors each containing the same number of matrices.</span><br><span class="line">If batch1 is a (b×n×m) tensor, batch2 is a (b×m×p) tensor, out will be a (b×n×p) tensor.</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="torch搭建network"><a href="#torch搭建network" class="headerlink" title="torch搭建network"></a>torch搭建network</h3><ul>
 <li>torch.nn模块包含与神经网络相关的结构</li>
@@ -409,7 +409,9 @@
 </blockquote>
 </li>
 </ul>
-<p>### </p>
+<h3 id="pack-padded-sequence-amp-amp-pad-packed-sequence"><a href="#pack-padded-sequence-amp-amp-pad-packed-sequence" class="headerlink" title="pack_padded_sequence &amp;&amp; pad_packed_sequence"></a>pack_padded_sequence &amp;&amp; pad_packed_sequence</h3><ul>
+<li>pack_padded_sequence(input, lengths, batch_first)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用batch训练的biRNN</span><br><span class="line">// 将同一个batch里进行padding操作过后的数据进行压缩</span><br><span class="line">input (Variable) – 变长序列 被填充后的 batch</span><br><span class="line"></span><br><span class="line">lengths (list[int]) – Variable 中 每个序列的长度</span><br><span class="line"></span><br><span class="line">batch_first (bool, optional) – 如果是True，input的形状应该是B*T*size</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -535,7 +537,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -557,7 +559,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -590,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#torch-tensor与numpy-ndarray的转化-tensor与ndarray相似"><span class="nav-number">1.</span> <span class="nav-text">torch tensor与numpy ndarray的转化[tensor与ndarray相似]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor上的基本操作与运算"><span class="nav-number">2.</span> <span class="nav-text">tensor上的基本操作与运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#torch搭建network"><span class="nav-number">3.</span> <span class="nav-text">torch搭建network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型的保存和加载"><span class="nav-number">4.</span> <span class="nav-text">模型的保存和加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minibatch"><span class="nav-number">5.</span> <span class="nav-text">minibatch</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#torch-tensor与numpy-ndarray的转化-tensor与ndarray相似"><span class="nav-number">1.</span> <span class="nav-text">torch tensor与numpy ndarray的转化[tensor与ndarray相似]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor上的基本操作与运算"><span class="nav-number">2.</span> <span class="nav-text">tensor上的基本操作与运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#torch搭建network"><span class="nav-number">3.</span> <span class="nav-text">torch搭建network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型的保存和加载"><span class="nav-number">4.</span> <span class="nav-text">模型的保存和加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minibatch"><span class="nav-number">5.</span> <span class="nav-text">minibatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pack-padded-sequence-amp-amp-pad-packed-sequence"><span class="nav-number">6.</span> <span class="nav-text">pack_padded_sequence &amp;&amp; pad_packed_sequence</span></a></li></ol></div>
             
 
           </div>

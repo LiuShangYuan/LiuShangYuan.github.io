@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/09/20/Solr初探/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/09/22/常用快捷键/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiuShangYuan">
@@ -312,7 +312,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/20/Solr初探/" itemprop="url">Solr初探</a></h1>
+                <a class="post-title-link" href="/2018/09/22/常用快捷键/" itemprop="url">常用快捷键</a></h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T16:27:56+08:00">
-                2018-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T22:43:30+08:00">
+                2018-09-22
               </time>
             
 
@@ -364,7 +364,254 @@
       
         
           
+            <h3 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h3><p><code>shift + alt + insert 进入和退出列选择模式</code></p>
+<p><code>Ctrl + Shift + Enter 补全语句</code></p>
+<p><code>Shift + Enter 再当前行下新开一行</code></p>
+<p><code>File -&gt; Settings -&gt; Live Templates 自定义代码模板</code></p>
+<p><code>双击Shift 全局搜索</code></p>
+<p><code>Ctrl + Shift + V 显示历史的复制记录</code></p>
+<p><code>Ctrl + Alt + T 包裹代码块</code></p>
+<h3 id="linux命令行"><a href="#linux命令行" class="headerlink" title="linux命令行"></a>linux命令行</h3><p><code>Ctrl + A 回到行首</code></p>
+<p><code>Ctrl + E 回到行尾</code></p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p><code>Win + P 屏幕</code></p>
+<p><code>Win + 数字 切换当前窗口</code></p>
+<p><code>Win + L 锁屏</code></p>
+<p><code>Ctrl + Alt + 方向键 旋转屏幕</code></p>
+<p><code>Ctrl + Win + 左右键 切换桌面</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/LiuShangYuan/LiuShangYuan.github.io/2018/09/21/Shell脚本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiuShangYuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tomcat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuShangYuan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/21/Shell脚本/" itemprop="url">Shell脚本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T11:55:08+08:00">
+                2018-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="运行Shell脚本"><a href="#运行Shell脚本" class="headerlink" title="运行Shell脚本"></a>运行Shell脚本</h3><ul>
+<li><p>作为可执行程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x ./test.sh  #使脚本具有执行权限</span><br><span class="line">./test.sh  #执行脚本</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>作为解释器参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 以此方式运行时再第一行不需要加#!/bin/bash</span><br><span class="line">/bin/sh test.sh</span><br><span class="line">/bin/php test.php</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Shell变量"><a href="#Shell变量" class="headerlink" title="Shell变量"></a>Shell变量</h3><ul>
+<li><p>定义变量</p>
+<blockquote>
+<p>定义变量时不需要加$符号 <br><br>给变量赋值时等号前后<strong>不要加空格</strong></p>
+</blockquote>
+</li>
+<li><p>使用变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 使用$引用已经定义的变量</span><br><span class="line">var1 = &quot;helloworld&quot;</span><br><span class="line">echo $var1 或 echo $&#123;var1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>只读变量readonly</p>
+</li>
+<li><p>删除变量</p>
+</li>
+<li><p>变量类型</p>
+</li>
+</ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
+<li><p>双引号和单引号区别</p>
+</li>
+<li><p>字符串拼接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">your_name=&quot;runoob&quot;</span><br><span class="line"># 使用双引号拼接</span><br><span class="line">greeting=&quot;hello, &quot;$your_name&quot; !&quot;</span><br><span class="line">greeting_1=&quot;hello, $&#123;your_name&#125; !&quot;</span><br><span class="line">echo $greeting  $greeting_1</span><br><span class="line"># 使用单引号拼接</span><br><span class="line">greeting_2=&apos;hello, &apos;$your_name&apos; !&apos;</span><br><span class="line">greeting_3=&apos;hello, $&#123;your_name&#125; !&apos;</span><br><span class="line">echo $greeting_2  $greeting_3</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">    hello, runoob ! hello, runoob !</span><br><span class="line">    hello, runoob ! hello, $&#123;your_name&#125; !</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;#str1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>截取子串</p>
+</li>
+</ul>
+<h3 id="Shell数组"><a href="#Shell数组" class="headerlink" title="Shell数组"></a>Shell数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 定义</span><br><span class="line">array_name=(v1 v2 v3 v4 ...) //使用空格进行分隔</span><br><span class="line">// 访问</span><br><span class="line">$&#123;array_name[index]&#125;</span><br><span class="line">// 获取所有元素</span><br><span class="line">$&#123;array_name[@]&#125; 或者 $&#123;array_name[*]&#125;</span><br><span class="line">// 获取数组的长度</span><br><span class="line">$&#123;#array_name[@]&#125; 或者 $&#123;#array_name[*]&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
+<li><p>单行注释 [使用#]</p>
+</li>
+<li><p>多行注释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:&lt;&lt; eof</span><br><span class="line"></span><br><span class="line">eof</span><br><span class="line"># eof也可以替换成其他符号</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Shell传递参数"><a href="#Shell传递参数" class="headerlink" title="Shell传递参数"></a>Shell传递参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$n用来接收执行脚本时传递的参数</span><br><span class="line">$0为脚本名称</span><br><span class="line">$#为传递的参数个数</span><br></pre></td></tr></table></figure>
+<h3 id="Shell基本运算符"><a href="#Shell基本运算符" class="headerlink" title="Shell基本运算符"></a>Shell基本运算符</h3><ul>
+<li><p>算术运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+, -, *, /, ==, =, !=, %</span><br><span class="line">[ $a == $b ] //运算符的两端必须要有空格, 中括号两端也必须要有空格</span><br><span class="line">`expr 2 + 2` //2 + 2运算符与运算数两端必须以空格隔开</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 乘号(*)前边必须加反斜杠(\)才能实现乘法运算；</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关系运算符[只支持数字]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-eq, -ne, -gt, -lt, -ge, -le</span><br><span class="line"></span><br><span class="line">eg: [ $a -eq $b ]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>布尔运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![非], -o[或], -a[与]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp;, ||</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串运算符</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=, !=, -z, -n, str</span><br><span class="line">-z  检测字符串长度是否为0，为0返回true [ -z $a ]</span><br><span class="line">-n  检测字符串长度是否为0，不为0返回true [ -n $b ]</span><br><span class="line">str 检测字符串是否为空，不为空返回 true [ str $a ]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>文件测试运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-d</span><br><span class="line">-f</span><br><span class="line">-r</span><br><span class="line">-w</span><br><span class="line">-x</span><br><span class="line">-s</span><br><span class="line">-e 检测文件是否存在，存在返回true [ -e $file ]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h3><ul>
+<li><p>显示换行 echo -e “OK !\n”</p>
+</li>
+<li><p>重定向 echo “hello shell” &gt; myfile</p>
+</li>
+<li><p>显示命令执行结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo `date`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="printf命令"><a href="#printf命令" class="headerlink" title="printf命令"></a>printf命令</h3><ul>
+<li>命令格式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">printf &quot;%-10s %-8s %-4s\n&quot; 郭靖 男 66.1234</span><br><span class="line">- 表示左对齐，没有时为右对齐</span><br><span class="line">%-4.2f 指格式化为小数，其中.2指保留2位小数</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="test命令"><a href="#test命令" class="headerlink" title="test命令"></a>test命令</h3><blockquote>
+<p>感觉没啥用处</p>
+</blockquote>
+<h3 id="let命令-执行表达式"><a href="#let命令-执行表达式" class="headerlink" title="let命令 [执行表达式]"></a>let命令 [执行表达式]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let n++</span><br><span class="line">let n+=10</span><br><span class="line">let n=n+2</span><br><span class="line">// 不需要加$来引用变量</span><br></pre></td></tr></table></figure>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">if xxx</span><br><span class="line">then</span><br><span class="line">    xxxxx</span><br><span class="line">elif</span><br><span class="line">then</span><br><span class="line">    xxxxx</span><br><span class="line">else</span><br><span class="line">    xxxxx</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if xxxxx; then xxxxx; fi //写成一行的形式</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>for循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for var in item1 item2 ... itemN</span><br><span class="line">do</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>while循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while condition</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无限循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while :</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br><span class="line">或者</span><br><span class="line">while true</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>until循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 不断循环直到condition为true时循环结束</span><br><span class="line">until condition</span><br><span class="line">do</span><br><span class="line">    command</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>case语句(类似与switch语句)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;输入 1 到 4 之间的数字:&apos;</span><br><span class="line">echo &apos;你输入的数字为:&apos;</span><br><span class="line">read aNum</span><br><span class="line">case $aNum in</span><br><span class="line">    1)  echo &apos;你选择了 1&apos;</span><br><span class="line">    ;;</span><br><span class="line">    2)  echo &apos;你选择了 2&apos;</span><br><span class="line">    ;;</span><br><span class="line">    3)  echo &apos;你选择了 3&apos;</span><br><span class="line">    ;;</span><br><span class="line">    4)  echo &apos;你选择了 4&apos;</span><br><span class="line">    ;;</span><br><span class="line">    *)  echo &apos;你没有输入 1 到 4 之间的数字&apos;</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="输入-输出和重定向"><a href="#输入-输出和重定向" class="headerlink" title="输入/输出和重定向"></a>输入/输出和重定向</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">默认情况下，command &gt; file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file</span><br><span class="line"></span><br><span class="line">标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据</span><br><span class="line">标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据</span><br><span class="line">标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息</span><br></pre></td></tr></table></figure>
+<ul>
+<li>/dev/null 文件<blockquote>
+<p>如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Shell文件包含"><a href="#Shell文件包含" class="headerlink" title="Shell文件包含"></a>Shell文件包含</h3><ul>
+<li><p>. filename</p>
+</li>
+<li><p>source filename</p>
+</li>
+</ul>
+
           
         
       
@@ -880,7 +1127,7 @@
 <li>tensor.from_numpy(ndarray) ndarray转换成tensor [注意指定dtype]</li>
 </ul>
 <h3 id="tensor上的基本操作与运算"><a href="#tensor上的基本操作与运算" class="headerlink" title="tensor上的基本操作与运算"></a>tensor上的基本操作与运算</h3><blockquote>
-<p>tensor.mean(dim=) dim=0每列 dim=1每行<br>abs(), ceil(), floor(), round()<br>flatten() 拉平成one dim<br>torch.matmul(), torch.mm(), troch.dot(), tensor.dot()<br>tensor.min(dim), tensor.max(dim)<br>tensor.argmax(dim), tensor.argmin(dim)<br>tensor.size(dim) 某个维度的大小<br>tensor.view() 改变维度(可以出入-1表示batch)<br>torch.stack([list of tensor], dim=) 堆叠</p>
+<p>tensor.mean(dim=) dim=0每列 dim=1每行<br>abs(), ceil(), floor(), round()<br>flatten() 拉平成one dim<br>torch.matmul(), torch.mm(), troch.dot(), tensor.dot()<br>tensor.min(dim), tensor.max(dim)<br>tensor.argmax(dim), tensor.argmin(dim)<br>tensor.size(dim) 某个维度的大小<br>tensor.view() 改变维度(可以出入-1表示batch)<br>torch.stack([list of tensor], dim=) 堆叠<br>torch.bmm(batch1, batch2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bmm()是在两个batch上执行乘法的操作</span><br><span class="line">batch1 and batch2 must be 3-D tensors each containing the same number of matrices.</span><br><span class="line">If batch1 is a (b×n×m) tensor, batch2 is a (b×m×p) tensor, out will be a (b×n×p) tensor.</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="torch搭建network"><a href="#torch搭建network" class="headerlink" title="torch搭建network"></a>torch搭建network</h3><ul>
 <li>torch.nn模块包含与神经网络相关的结构</li>
@@ -920,7 +1167,9 @@
 </blockquote>
 </li>
 </ul>
-<p>### </p>
+<h3 id="pack-padded-sequence-amp-amp-pad-packed-sequence"><a href="#pack-padded-sequence-amp-amp-pad-packed-sequence" class="headerlink" title="pack_padded_sequence &amp;&amp; pad_packed_sequence"></a>pack_padded_sequence &amp;&amp; pad_packed_sequence</h3><ul>
+<li>pack_padded_sequence(input, lengths, batch_first)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用batch训练的biRNN</span><br><span class="line">// 将同一个batch里进行padding操作过后的数据进行压缩</span><br><span class="line">input (Variable) – 变长序列 被填充后的 batch</span><br><span class="line"></span><br><span class="line">lengths (list[int]) – Variable 中 每个序列的长度</span><br><span class="line"></span><br><span class="line">batch_first (bool, optional) – 如果是True，input的形状应该是B*T*size</span><br></pre></td></tr></table></figure></li>
+</ul>
 
           
         
@@ -1714,7 +1963,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1736,7 +1985,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
